@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigeria Country Page</title>
+    <meta name="description" content="WDD 131 assignment detailing data and weather conditions for Nigeria.">
+    <meta name="author" content="Arowolaje Joshua Oluwatimileyin">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Nigeria</h1>
+    </header>
+
+    <main>
+        <div class="hero-container">
+            <picture>
+                <source srcset="images/nigeria-large.webp" media="(min-width: 768px)">
+                <img src="images/nigeria-small.webp" alt="Landscape in Nigeria" class="hero-image" loading="lazy">
+            </picture>
+
+
+            <section class="card data-card">
+                <h2>Data</h2>
+                <ul>
+                    <li><span>Area:</span> 923,768 sq km</li>
+                    <li><span>Population:</span> 218,541,212</li>
+                    <li><span>Capital:</span> Abuja</li>
+                    <li><span>Languages:</span> English, Hausa, Yoruba, Igbo</li>
+                    <li><span>Currency:</span> Nigerian Naira (NGN)</li>
+                    <li><span>Time Zone:</span> UTC+1</li>
+                    <li><span>Calling Code:</span> +234</li>
+                    <li><span>Internet TLD:</span> .ng</li>
+                </ul>
+            </section>
+
+            <section class="card weather-card">
+                <h2 class="weather-title">Weather</h2>
+                <div class="weather-icon-mobile">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280Z"/></svg>
+                </div>
+                <ul>
+                    <li><span>Temperature:</span> 30°C</li>
+                    <li><span>Conditions:</span> Sunny</li>
+                    <li><span>Wind:</span> 10 km/h</li>
+                    <li><span>Wind Chill:</span> <span id="wind-chill"></span></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="current-year"></span> Arowolaje Joshua Oluwatimileyin</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
