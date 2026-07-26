@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtered Temple Album</title>
+  <meta name="description" content="This is my temple activity">
+  <meta name="author" content="Arowolaje Joshua Oluwatimileyin">
+
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css" media="screen and (min-width: 768px)">
+
+  <script src="scripts/filtered-temples.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
+    <button id="menu" aria-label="Toggle Navigation Menu"></button>
+    <nav>
+      <ul class="navigation">
+        <li><a href="#" id="home">Home</a></li>
+        <li><a href="#" id="old">Old</a></li>
+        <li><a href="#" id="new">New</a></li>
+        <li><a href="#" id="large">Large</a></li>
+        <li><a href="#" id="small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Home</h2>
+    <div id="temple-cards"></div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Arowolaje Joshua Oluwatimileyin Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
