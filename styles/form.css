@@ -1,0 +1,250 @@
+:root {
+    --primary-color: #1e3a8a;
+    --primary-hover: #1d4ed8;
+    --background-color: #f8fafc;
+    --card-background: #ffffff;
+    --text-color: #1e293b;
+    --border-color: #cbd5e1;
+    --star-color: #f59e0b;
+    --star-empty: #d1d5db;
+    --focus-ring: #93c5fd;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 1.5rem 0;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 8px 8px 0 0;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    background: var(--card-background);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+
+.form-item {
+    margin-bottom: 1.5rem;
+}
+
+label, legend {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.required {
+    color: #dc2626;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+/* Star Rating Layout */
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 0.25rem;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 2rem;
+    color: var(--star-empty);
+    cursor: pointer;
+    transition: color 0.2s ease;
+    margin-bottom: 0;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input[type="radio"]:checked ~ label {
+    color: var(--star-color);
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    accent-color: var(--primary-color);
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.85rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.confirmation-card {
+    text-align: center;
+    padding: 2rem;
+}
+
+.counter-badge {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 1rem;
+}
+
+.return-link {
+    display: inline-block;
+    margin-top: 2rem;
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 0.875rem;
+    color: #64748b;
+    Display: flex;
+    Flex-direction: column;
+    Gap: 0.5rem;
+}
+
+.checkbox-group label {
+    Font-weight: normal;
+    Display: flex;
+    Align-items: center;
+    Gap: 0.5rem;
+    Cursor: pointer;
+}
+
+.checkbox-group input[type=”checkbox”] {
+    Width: 1.2rem;
+    Height: 1.2rem;
+    Accent-color: var(--primary-color);
+}
+
+/* Submit Button */
+.submit-btn {
+    Width: 100%;
+    Background-color: var(--primary-color);
+    Color: white;
+    Border: none;
+    Padding: 0.85rem;
+    Font-size: 1.1rem;
+    Font-weight: 600;
+    Border-radius: 6px;
+    Cursor: pointer;
+    Transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    Background-color: var(--primary-hover);
+}
+
+/* Review Confirmation Page Styles */
+.confirmation-card {
+    Text-align: center;
+    Padding: 2rem;
+}
+
+.counter-badge {
+    Font-size: 1.25rem;
+    Font-weight: bold;
+    Color: var(--primary-color);
+    Margin-top: 1rem;
+}
+
+.return-link {
+    Display: inline-block;
+    Margin-top: 2rem;
+    Color: var(--primary-color);
+    Text-decoration: underline;
+}
+
+/* Footer */
+Footer {
+    Text-align: center;
+    Margin-top: 2rem;
+    Padding: 1rem;
+    Font-size: 0.875rem;
+    Color: #64748b;
+}
+
