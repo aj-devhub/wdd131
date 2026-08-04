@@ -3,11 +3,12 @@
     --primary-hover: #1d4ed8;
     --background-color: #f8fafc;
     --card-background: #ffffff;
-    --text-color: #1e293b;
-    --border-color: #cbd5e1;
-    --star-color: #f59e0b;
-    --star-empty: #d1d5db;
-    --focus-ring: #93c5fd;
+    --text-color: #0f172a;        
+    --footer-text-color: #334155; 
+    --border-color: #94a3b8;      
+    --star-color: #d97706;        
+    --star-empty: #64748b;        
+    --focus-ring: #2563eb;
 }
 
 * {
@@ -27,28 +28,32 @@ body {
     min-height: 100vh;
 }
 
+header, main {
+    width: 100%;
+    margin: 0 auto;
+}
+
 header {
     text-align: center;
-    padding: 1.5rem 0;
+    padding: 1.5rem 1rem;
     background-color: var(--primary-color);
-    color: white;
+    color: #ffffff;
     border-radius: 8px 8px 0 0;
-    max-width: 600px;
-    margin: 0 auto;
-    width: 100%;
 }
 
 main {
-    max-width: 600px;
-    margin: 0 auto;
-    width: 100%;
     background: var(--card-background);
-    padding: 2rem;
+    padding: 1.5rem;
     border: 1px solid var(--border-color);
     border-top: none;
     border-radius: 0 0 8px 8px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     flex-grow: 1;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
 }
 
 .form-item {
@@ -57,12 +62,14 @@ main {
 
 label, legend {
     display: block;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 0.5rem;
+    color: var(--text-color);
 }
 
 .required {
-    color: #dc2626;
+    color: #b91c1c;
+    font-weight: bold;
 }
 
 input[type="text"],
@@ -75,7 +82,8 @@ textarea {
     border-radius: 6px;
     font-size: 1rem;
     font-family: inherit;
-    background-color: #fff;
+    background-color: #ffffff;
+    color: var(--text-color);
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -83,22 +91,15 @@ input[type="text"]:focus,
 input[type="date"]:focus,
 select:focus,
 textarea:focus {
-    outline: none;
+    outline: 2px solid var(--focus-ring);
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px var(--focus-ring);
-}
-
-/* Star Rating Layout */
-fieldset {
-    border: none;
-    padding: 0;
 }
 
 .star-rating {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
-    gap: 0.25rem;
+    gap: 0.5rem;
 }
 
 .star-rating input[type="radio"] {
@@ -106,7 +107,7 @@ fieldset {
 }
 
 .star-rating label {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--star-empty);
     cursor: pointer;
     transition: color 0.2s ease;
@@ -134,19 +135,19 @@ fieldset {
 }
 
 .checkbox-group input[type="checkbox"] {
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1.25rem;
+    height: 1.25rem;
     accent-color: var(--primary-color);
 }
 
 .submit-btn {
     width: 100%;
     background-color: var(--primary-color);
-    color: white;
+    color: #ffffff;
     border: none;
     padding: 0.85rem;
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 700;
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.2s ease;
@@ -158,12 +159,12 @@ fieldset {
 
 .confirmation-card {
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 1rem;
 }
 
 .counter-badge {
     font-size: 1.25rem;
-    font-weight: bold;
+    font-weight: 700;
     color: var(--primary-color);
     margin-top: 1rem;
 }
@@ -172,79 +173,27 @@ fieldset {
     display: inline-block;
     margin-top: 2rem;
     color: var(--primary-color);
+    font-weight: 600;
     text-decoration: underline;
 }
 
-/* Footer */
 footer {
     text-align: center;
     margin-top: 2rem;
     padding: 1rem;
-    font-size: 0.875rem;
-    color: #64748b;
-    Display: flex;
-    Flex-direction: column;
-    Gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--footer-text-color);
+    font-weight: 500;
 }
 
-.checkbox-group label {
-    Font-weight: normal;
-    Display: flex;
-    Align-items: center;
-    Gap: 0.5rem;
-    Cursor: pointer;
-}
+/* Responsive Layout - Media Queries */
+@media (min-width: 600px) {
+    header, main {
+        max-width: 600px;
+    }
 
-.checkbox-group input[type=”checkbox”] {
-    Width: 1.2rem;
-    Height: 1.2rem;
-    Accent-color: var(--primary-color);
-}
-
-/* Submit Button */
-.submit-btn {
-    Width: 100%;
-    Background-color: var(--primary-color);
-    Color: white;
-    Border: none;
-    Padding: 0.85rem;
-    Font-size: 1.1rem;
-    Font-weight: 600;
-    Border-radius: 6px;
-    Cursor: pointer;
-    Transition: background-color 0.2s ease;
-}
-
-.submit-btn:hover {
-    Background-color: var(--primary-hover);
-}
-
-/* Review Confirmation Page Styles */
-.confirmation-card {
-    Text-align: center;
-    Padding: 2rem;
-}
-
-.counter-badge {
-    Font-size: 1.25rem;
-    Font-weight: bold;
-    Color: var(--primary-color);
-    Margin-top: 1rem;
-}
-
-.return-link {
-    Display: inline-block;
-    Margin-top: 2rem;
-    Color: var(--primary-color);
-    Text-decoration: underline;
-}
-
-/* Footer */
-Footer {
-    Text-align: center;
-    Margin-top: 2rem;
-    Padding: 1rem;
-    Font-size: 0.875rem;
-    Color: #64748b;
+    main {
+        padding: 2.5rem;
+    }
 }
 
