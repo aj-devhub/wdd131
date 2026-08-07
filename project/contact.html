@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Trails Hub - Contact</title>
+  <meta name="description" content="Contact Local Trails Hub to suggest new trails or report issues.">
+  <meta name="author" content="Arowolaje Joshua Oluwatimileyin">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Local Trails Hub</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="explore.html">Explore Trails</a>
+      <a href="contact.html" class="active">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contact Us</h2>
+    <form id="contact-form" action="#" method="get" class="form-container">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="inquiry-type">Inquiry Type:</label>
+      <select id="inquiry-type" name="inquiryType" required>
+        <option value="">Select an Option...</option>
+        <option value="general">General Question</option>
+        <option value="suggestion">Suggest a Trail</option>
+      </select>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Submit Inquiry</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Arowolaje Joshua Oluwatimileyin <a href="references.html">References Page</a></p>
+  </footer>
+</body>
+</html>

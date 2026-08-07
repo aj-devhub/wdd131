@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Trails Hub - Explore</title>
+  <meta name="description" content="Search and filter outdoor trails by difficulty and category.">
+  <meta name="author" content="Arowolaje Joshua Oluwatimileyin">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Local Trails Hub</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="explore.html" class="active">Explore Trails</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Explore All Trails</h2>
+    <div class="filter-controls">
+      <label for="category-filter">Filter by Category:</label>
+      <select id="category-filter">
+        <option value="all">All Categories</option>
+        <option value="hiking">Hiking</option>
+        <option value="biking">Biking</option>
+      </select>
+    </div>
+
+    <div id="trail-grid" class="grid-container"></div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Arowolaje Joshua Oluwatimileyin <a href="references.html">References Page</a></p>
+  </footer>
+</body>
+</html>
